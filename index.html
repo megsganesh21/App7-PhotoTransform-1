@@ -135,13 +135,20 @@
       <div id="messageDisplayArea"></div>
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
-      </script>
+     <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+    <!--this is where the blue pic will do -->
+      /* were now looking that the main canvas */
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext("2d");
+context.font = '20pt Calibri';
+context.fillStyle = "black";
+context.fillText("Original image will go here", 10, 20);
+
+/* here were talking about the blue color recognition */
+var canvas2 = document.getElementById('myCanvas2'); // making the box identificaiotn tool// We create a "pen" (context) to draw on it
+context2.font = '20pt Calibri';
+context2.fillStyle = "blue";                       // usng blue text);
+/* STEP 2 END */
 
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
