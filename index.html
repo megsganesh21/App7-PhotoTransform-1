@@ -81,6 +81,11 @@
 
 /* window.onload necessary to keep javascripts from running before the app gets a chance to load entirely. */
  window.onload = function() {
+    var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+
+  var canvas2 = document.getElementById("myCanvas2");
+  var context2 = canvas2.getContext("2d");
   var fileInput = document.getElementById('fileInput');
   var messageDisplayArea = document.getElementById('messageDisplayArea');
   /* fileInput.addEventListener looks for any change in the <input> tag indicating that the user has selected a file (picture). */
