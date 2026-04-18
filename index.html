@@ -106,13 +106,14 @@
         
           drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
 
-/* taking the orginal image */
+/* were using this to get the orignial picture - we can now use the pixels to figure out the color */
 var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
 var data = imageData.data;
 
-/* this is to make sure each pixel = the for loop code goes through */
-/* each pixel = 4 numbers: [Red, Green, Blue, Alpha] */
+/* this is to make sure each pixel = is looped through */
+/* each pixel = [Red, Green, Blue, Alpha] */
 for (var i = 0; i < data.length; i += 4) {
+ //were removing all the other colors other than blue
     data[i] = 0;     // This sets Red to 0
     data[i + 1] = 0; // This sets Green to 0
     /*leave blue so its brighter! */
