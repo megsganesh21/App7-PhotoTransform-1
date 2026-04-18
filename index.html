@@ -31,9 +31,13 @@
 -->
 
  <head>
+  <!--sets character code for document -->
   <meta charset="utf-8">
-  <title>Photo Transform</title>
+ 
+<title>Photo Transform</title>
+  
   <meta name="viewport" content="width=device-width, initial-scale=.7">
+  
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -98,7 +102,7 @@
           drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
 
 /* taking the orginal image */
-var imageData = context.getImageData(0, 0, 600, 500);
+var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
 var data = imageData.data;
 
 /* this is to make sure each pixel = the for loop code goes through */
